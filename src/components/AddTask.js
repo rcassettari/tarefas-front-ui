@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const AddTask = ({ onAdd }) => {
   const [titulo, setTitulo] = useState("");
-  const [dia, setDia] = useState("");
+  const [diaAtividade, setDia] = useState("");
   const [importante, setImportante] = useState(false);
 
   const onSubmit = (e) => {
@@ -13,7 +13,7 @@ const AddTask = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ titulo, dia, importante });
+    onAdd({ titulo, diaAtividade, importante });
 
     setTitulo("");
     setDia("");
@@ -34,9 +34,9 @@ const AddTask = ({ onAdd }) => {
       <div className="form-control">
         <label>Dia</label>
         <input
-          type="text"
+          type="date"
           placeholder="Adicione o Dia"
-          value={dia}
+          value={diaAtividade}
           onChange={(e) => setDia(e.target.value)}
         />
       </div>

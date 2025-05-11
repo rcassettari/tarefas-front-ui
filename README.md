@@ -1,2 +1,2 @@
 # tarefas-front-ui
-Front-end application for testing purposes, work with backend TaskControl
+FrontEnd project for task control project
